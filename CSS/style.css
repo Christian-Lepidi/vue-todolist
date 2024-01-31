@@ -1,0 +1,11 @@
+.task {
+  background-color: rgb(156, 232, 206);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.fa-times {
+  cursor: pointer;
+}
