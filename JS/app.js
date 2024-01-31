@@ -50,5 +50,8 @@ const app = createApp({
 
       this.newTask.name = "";
     },
+    deleteTask(i) {
+      this.tasks.splice(i, 1);
+    },
   },
 }).mount("#app");

@@ -26,7 +26,11 @@
       <h1 class="text-center text-danger">TODO LIST</h1>
       <div class="container">
         <h2>{{title}}</h2>
-        <input v-model="newTask.name" type="text" class="form-control my-2" />
+        <input
+          v-model.trim="newTask.name"
+          type="text"
+          class="form-control my-2"
+        />
         <button @click="saveNewTask()" type="button" class="btn btn-primary">
           Salva
         </button>
@@ -34,8 +38,14 @@
           <div class="col-5 my-2">
             <h2 class="text-center">Task List</h2>
             <ul>
-              <li v-for="task in tasks" class="task" :class="{done:task.done }">
-                {{task.name}}<span><i class="fas fa-times"></i></span>
+              <li
+                v-for="(task,index) in tasks"
+                class="task"
+                :class="{done:task.done }"
+              >
+                {{task.name}}<span
+                  ><i @click="deleteTask(index)" class="fas fa-times"></i
+                ></span>
               </li>
             </ul>
           </div>
