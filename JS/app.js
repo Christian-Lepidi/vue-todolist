@@ -34,6 +34,17 @@ const app = createApp({
           done: true,
         },
       ],
+      newTask: {
+        name: "",
+        done: false,
+      },
     };
+  },
+
+  method: {
+    saveNewTask() {
+      const newTaskCopy = { ...this.newTask };
+      this.tasks.push(newTaskCopy);
+    },
   },
 }).mount("#app");
