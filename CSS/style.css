@@ -9,3 +9,7 @@
 .fa-times {
   cursor: pointer;
 }
+
+.done {
+  text-decoration: line-through;
+}

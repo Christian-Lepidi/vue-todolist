@@ -32,7 +32,7 @@
           <div class="col-5 my-2">
             <h2 class="text-center">Task List</h2>
             <ul>
-              <li v-for="task in tasks" class="task">
+              <li v-for="task in tasks" class="task" :class="{done:task.done }">
                 {{task.name}}<span><i class="fas fa-times"></i></span>
               </li>
             </ul>
